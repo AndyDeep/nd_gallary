@@ -1,0 +1,407 @@
+*,
+*::before,
+*::after{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+h1,p{
+    text-align: center;
+}
+
+.body1{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 192, 192);
+    display: flex;  
+}
+.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.image-gallery{
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem  ;
+    grid-template-areas:
+    'img1 img1 img2 img2' 
+    'img3 img4 img5 img6'
+    'img3 img8 img8 img6'
+    'img9 img7 img13 img12'
+    'img9 img14 img13 img12'
+    'img10 img14 img11 img17'
+    'img10 img15 img11 img19' 
+    'img24 img21 img22 img19'
+    'img24 img26 img26 img27'
+    'img28 img30 img30 img27'
+    'img16 img25 img20 img18'
+    'img29 img29 img29 img18';
+    
+}
+.image-gallery a{
+    width: 100%;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 2px solid blanchedalmond;
+}
+/*
+.image-gallery a i{
+    color:rgba(225, 225, 22 5, 0.6);
+    font: size 3rem; 
+    position: relative;
+    z-index: 100;
+    padding: 1rem 3rem;
+    border: 3px solid rgba(25, 25, 25, .6);
+    border-radius: .4rem;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+*/
+.image-gallery a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity .5s;
+
+}
+.image-gallery a:hover::before{
+    opacity: 0.4;
+}
+.img1
+{
+    grid-area: img1;
+    min-height: 100px;
+    background-image: url(../imgs/1.jpg);
+}
+.img2
+{
+    grid-area: img2;
+    background-image: url(../imgs/2.jpeg);
+}
+.img3
+{
+    min-height: 55rem;  
+    grid-area: img3;
+    background-image: url(../imgs/3.jpg);
+}
+
+.img4
+{
+    grid-area: img4;
+    background-image: url(../imgs/4.jpg);
+}
+.img5
+{
+    grid-area: img5;
+    background-image: url(../imgs/5.jpeg);
+}
+
+.img6
+{
+    grid-area: img6;
+    background-image: url(../imgs/6.jpg);
+    min-height: 55rem;
+}
+
+.img7
+{
+    grid-area: img7;
+    background-image: url(../imgs/7.jpg);
+}
+.img8
+{
+   grid-area: img8;
+    background-image: url(../imgs/8.jpg);
+    
+}
+.img9
+{
+    grid-area: img9;
+    background-image: url(../imgs/9.jpg);
+    min-height: 55rem;
+} 
+.img10
+{
+    grid-area: img10;
+    background-image: url(../imgs/10.jpg);
+    min-height: 55rem;  
+}
+.img11
+{
+    grid-area: img11;
+    min-height: 55rem;
+    background-image: url(../imgs/11.jpeg);
+}
+.img12
+{
+    grid-area: img12;
+    background-image: url(../imgs/12.jpeg);
+    min-height: 55rem;
+}
+.img13
+{
+    grid-area: img13;
+    background-image:url(../imgs/13.jpeg);
+    min-height: 55rem;
+}
+.img14
+{
+    grid-area: img14;
+    background-image: url(../imgs/14.jpg);
+    min-height: 55rem;
+}
+.img15
+{
+    grid-area: img15;
+    background-image: url(../imgs/15.jpg);
+    max-height: 55rem;  
+}
+.img16
+{
+    grid-area: img16;
+    background-image: url(../imgs/16.jpg);
+}
+.img17
+{
+    grid-area: img17;
+    background-image: url(../imgs/17.jpg);
+    max-height: 55rem;
+}
+.img18
+{
+    grid-area: img18;
+    min-height: 55rem;
+    background-image: url(../imgs/18.jpg);
+}
+.img19
+{
+    grid-area: img19;
+    background-image: url(../imgs/19.jpg);
+    min-height: 55rem;
+}
+.img20
+{
+    grid-area: img20;
+    background-image: url(../imgs/20.jpg);
+}
+.img21
+{
+    grid-area: img21;
+    background-image: url(../imgs/21.jpg);
+}
+.img22
+{
+    grid-area: img22;
+    background-image: url(../imgs/22.jpg);
+}
+.img23
+{
+    grid-area: img24;
+    background-image: url(../imgs/23.jpg);
+}
+.img24
+{
+    grid-area: img24;
+    background-image: url(../imgs/25.jpg);
+    min-height: 55rem;
+}
+.img25
+{
+    grid-area: img25;
+    background-image: url(../imgs/25.jpg);
+}
+.img26
+{
+    grid-area: img26;
+    background-image: url(../imgs/26.jpg);
+}
+.img27
+{
+    grid-area: img27;
+    background-image: url(../imgs/27.jpg);
+    min-height: 55rem;
+}
+.img28
+{
+    grid-area: img28;
+    background-image: url(../imgs/28.jpg);
+}
+.img29
+{
+    grid-area: img29;
+    background-image: url(../imgs/29.jpg);
+}
+.img30
+{
+    grid-area: img30;
+    background-image: url(../imgs/30.jpg);
+}
+
+
+
+@media screen and (max-width:900px)
+{
+.image-gallery
+{
+    
+    grid-template-areas:  
+    'img1 img1 img1 img1' 
+    'img3 img3 img3 img3'
+    'img3 img3 img3 img3'
+    'img2 img2 img2 img2'
+    'img4 img4 img4 img4'
+    'img5 img5 img30 img30'
+    'img6 img6 img6 img6' 
+    'img7 img7 img7 img7'
+    'img9 img9 img9 img9'
+    'img9 img9 img9 img9'
+    'img10 img10 img10 img10'
+    'img11 img11 img11 img11'
+    'img11 img11 img11 img11'
+    'img12 img12 img12 img12'
+    'img12 img12 img12 img12'
+    'img13 img13 img13 img13'
+    'img13 img13 img13 img13'
+    'img14 img14 img14 img14'
+    'img14 img14 img14 img14'
+    'img15 img15 img15 img15'
+    'img15 img15 img15 img15'
+    'img16 img16 img16 img16'
+    'img16 img16 img16 img16'
+    
+    'img18 img18 img18 img18'
+    'img18 img18 img18 img18'
+    'img19 img19 img19 img19'
+    'img19 img19 img19 img19'
+    
+    'img21 img21 img20 img20'
+    'img21 img21 img20 img20'
+    
+    'img24 img24 img24 img24'
+    'img24 img24 img24 img24'
+    
+    'img26 img26 img26 img26'
+    'img26 img26 img26 img26'
+    
+    'img27 img27 img27 img27'
+    'img27 img27 img27 img27'
+    'img27 img27 img27 img27'
+    'img27 img27 img27 img27'
+    'img29 img29 img29 img29'
+    'img29 img29 img29 img29'
+    'img28 img28 img28 img28'
+    'img28 img28 img28 img28'
+  
+  
+    
+    
+    
+    ;
+  
+
+}
+.image-gallery a{
+    height: 20rem;
+
+}
+
+}
+@media screen and (max-width:360px)
+{
+.image-gallery
+{
+    
+    grid-template-areas:
+    'img1 img1 img1 img1' 
+    'img3 img3 img3 img3'
+    'img3 img3 img3 img3'
+    'img2 img2 img2 img2'
+    'img4 img4 img4 img4'
+    'img5 img5 img30 img30'
+    'img6 img6 img6 img6' 
+    'img7 img7 img7 img7'
+    'img9 img9 img9 img9'
+    'img9 img9 img9 img9'
+    'img10 img10 img10 img10'
+    'img11 img11 img11 img11'
+    'img11 img11 img11 img11'
+    'img12 img12 img12 img12'
+    'img12 img12 img12 img12'
+    'img13 img13 img13 img13'
+    'img13 img13 img13 img13'
+    'img14 img14 img14 img14'
+    'img14 img14 img14 img14'
+    'img15 img15 img15 img15'
+    'img15 img15 img15 img15'
+    'img16 img16 img16 img16'
+    'img16 img16 img16 img16'
+    
+    'img18 img18 img18 img18'
+    'img18 img18 img18 img18'
+    'img19 img19 img19 img19'
+    'img19 img19 img19 img19'
+    
+    'img21 img21 img20 img20'
+    'img21 img21 img20 img20'
+    
+    'img24 img24 img24 img24'
+    'img24 img24 img24 img24'
+    
+    'img26 img26 img26 img26'
+    'img26 img26 img26 img26'
+    
+    'img27 img27 img27 img27'
+    'img27 img27 img27 img27'
+    'img27 img27 img27 img27'
+    'img27 img27 img27 img27'
+    'img29 img29 img29 img29'
+    'img29 img29 img29 img29'
+    'img28 img28 img28 img28'
+    'img28 img28 img28 img28'
+  
+  
+    
+    
+    
+    
+    
+    ;
+  
+}
+.image-gallery a{
+    height: 20rem;
+
+}
+.img1{
+    min-height: 4.5px;
+}
+.img6,.img15{
+    min-width: height 21.5em;
+}
+}
+.body1{
+    background-image: url(../imgs/beach.jpg);
+   
+}
